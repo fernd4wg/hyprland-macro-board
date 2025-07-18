@@ -1,0 +1,6 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "promicro")(type "KiCad")(uri "/home/f/git/ProMicroKiCad/promicro.pretty")(options "")(descr ""))
+  (lib (name "Arduino")(type "KiCad")(uri "/home/f/git/kicad-lib-arduino/Arduino.pretty")(options "")(descr ""))
+  (lib (name "ScottoKeebs_Components")(type "KiCad")(uri "/home/f/git/scottokeebs/Extras/ScottoKicad/footprints/ScottoKeebs_Components.pretty")(options "")(descr ""))
+)
