@@ -4,7 +4,7 @@
 #define VENDOR_ID 0x0002
 #define PRODUCT_ID 0x0001
 #define DEVICE_VER 0x0000
-#define MANUFACTURER "Me"
+#define MANUFACTURER "fernd4wg"
 #define PRODUCT "Board"
 
 // matrix size
