@@ -8,6 +8,16 @@ enum layerNames {
   _NUMPAD
 };
 
+#if defined(ENCODER_MAP_ENABLE)
+const uint16_t PROGMEM encoder_map[][1][2] = {
+    [_HYPRLAND] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+    [_VIM] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+    [_GENERAL] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+    [_FN] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+    [_NUMPAD] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+};
+#endif
+
 #ifdef OLED_ENABLE
 static void hypr_oled(void) {
     static const char PROGMEM hypr[] = {
@@ -227,7 +237,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // HYPRLAND LAYOUT
   [_HYPRLAND] = LAYOUT(
     TG(_VIM), XXXXXXX, XXXXXXX // toggle next layer
-    G(KC_F), G(KC_SPC), G(),
+    G(KC_F), G(KC_SPC), G(KC_C),
     G(KC_Q), G(KC_B), G(KC_D),
     G(KC_COMM), G(KC_UP), G(KC_DOT),
     G(KC_LEFT), G(KC_DOWN), G(KC_RIGHT),
@@ -235,18 +245,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // VIM LAYOUT
   [_VIM] = LAYOUT(
     TG(_GENERAL), XXXXXXX, XXXXXXX // toggle next layer
-    C(), C(), C(),
-    C(), C(), C(),
-    C(), C(), C(),
-    C(), C(), C(), 
+    KC_ESC, KC_V, KC_I, // modes: normal, visual, insert
+    KC_D, _, _,
+    _, KC_K, _,
+    KC_H, KC_K, KC_L,
   )
   // GENERAL & BROWSER LAYOUT
   [_GENERAL] = LAYOUT(
     TG(_FN), XXXXXXX, XXXXXXX // toggle next layer
-    C(KC_C), C(KC_V), C(KC_Z), 
-    C(KC_T), C(KC_W), C(KC_L), 
-    C(K_TAB), C(S(KC_TAB)), C(KC_R), 
-    _______, _______, _______, 
+    C(KC_C), C(KC_V), C(KC_Z),
+    C(KC_T), C(KC_W), C(KC_L),
+    C(KC_TAB), C(S(KC_TAB)), C(KC_R),
+    C(S(KC_T)),A(KC_LEFT), A(KC_RIGHT),
   )
   // FUNCTION
   [_FN] = LAYOUT(

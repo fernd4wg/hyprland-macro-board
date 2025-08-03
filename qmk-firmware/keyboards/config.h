@@ -13,6 +13,12 @@
 
 #define DIODE_PROTECTION COL2ROW
 
+// encoder details
+#define ENCODER_A_PINS {F6} 
+#define ENCODER_B_PINS {F7}
+
+#define ENCODER_RESOLUTION 4
+
 // oled display 
 #define OLED_DISPLAY_128x32
 // #define OLED_TIMEOUT 60000
