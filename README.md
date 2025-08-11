@@ -10,7 +10,6 @@ convert images. You can make your own 128x32 (recommended) or get images off the
 
 ``` 
 cp hyprmacroboard /PATH/TO/YOUR/QMK/KEYBOARD/DIR
-
 ```
 
 # Compiling and Flashing
