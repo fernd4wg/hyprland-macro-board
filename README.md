@@ -8,17 +8,27 @@ convert images. You can make your own 128x32 (recommended) or get images off the
 # Copying Keyboard Firmware to qmk_firmware Directory 
   Copy /hyprland-macro-board/hyprmacroboard into where your qmk_firmware/keyboards directory is so you can easily flash the firmware. Do this in the /hypr-macro-board directory
 
+```
+bash 
 cp hyprmacroboard /PATH/TO/YOUR/QMK/KEYBOARD/DIR
 
+```
 
 # Compiling and Flashing
 * Compile:
+```
 
+``` bash 
 qmk compile -kb hyprmacroboard -km default
+```
+```
 
 * Flash:
+``` bash
 
 qmk flash -kb hyprmacroboard -km default
+```
+```
 
 # Things to know 
   Resetting the board is annoying 9_9
