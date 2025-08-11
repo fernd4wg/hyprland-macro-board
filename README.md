@@ -16,18 +16,13 @@ cp hyprmacroboard /PATH/TO/YOUR/QMK/KEYBOARD/DIR
 
 # Compiling and Flashing
 * Compile:
-```
-
-``` bash 
+``` 
 qmk compile -kb hyprmacroboard -km default
-```
 ```
 
 * Flash:
-``` bash
-
-qmk flash -kb hyprmacroboard -km default
 ```
+qmk flash -kb hyprmacroboard -km default
 ```
 
 # Things to know 
