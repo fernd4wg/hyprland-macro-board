@@ -24,5 +24,4 @@ qmk flash -kb hyprmacroboard -km default
 ```
 
 # Things to know 
-  Resetting the board is annoying 9_9
-  All the components that are not the switches do not fit into their respective places so do not print them until this message is not in this file.
+  Resetting the board is annoying 9_9. All the components that are not the switches do not fit into their respective places so do not print the case parts until this message is not in this file.
