@@ -2,10 +2,25 @@
   "bootloader": "caterina",
   "keyboard_name": "hyprmacroboard",
   "manufacturer": "fernd4wg",
+  "url": "https://github.com/fernd4wg/hyprland-macro-board",
+  "diode_direction": "COL2ROW",
+  "matrix_pins": {
+    "cols": ["F4", "F5", "B4"],
+    "rows": ["B1", "B3", "B2", "B6", "B5"]
+  }
   "usb": {
     "vid": "0x0002",
     "pid": "0x0001",
     "device_version": "0.0.1"
+  },
+  "features": {
+    "oled": true
+    "encoder": true,
+  },
+  "encoder": {
+      "rotary": [
+        {"pin_a": "F6", "pin_b":"F7", "resolution": 4}
+      ]
   },
 
   "layouts": {
