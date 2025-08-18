@@ -13,14 +13,9 @@ cp hyprmacroboard /PATH/TO/YOUR/QMK/KEYBOARD/DIR
 ```
 
 # Compiling and Flashing
-* Compile:
+* Compile and Flash Firmware:
 ``` 
 qmk compile -kb hyprmacroboard -km default
-```
-
-* Flash:
-```
-qmk flash -kb hyprmacroboard -km default
 ```
 
 # Things to know 
