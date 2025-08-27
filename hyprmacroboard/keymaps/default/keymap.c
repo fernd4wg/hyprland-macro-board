@@ -44,9 +44,27 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) {
     return OLED_ROTATION_180;
 }
 
-bool oled_task_user(void) {
-    oled_write_ln_P(PSTR("Hello, OLED!"), false);
-    return false;
+oled_write_P(PSTR("Layer: "), false);
+
+    switch (get_highest_layer(layer_state)) {
+        case _HYPRLAND:
+            oled_write_P(PSTR("HYPRLAND\n"), false);
+            break;
+        case _VIM:
+            oled_write_P(PSTR("VIM\n"), false);
+            break;
+        case _GENERAL:
+            oled_write_P(PSTR("GENERAL\n"), false);
+            break;
+        case _FN: 
+            oled_write_P(PSTR("FN\n"), false);
+            break;
+        case _NUMPAD:
+            oled_write_P(PSTR("NUMPAD\n"), false);
+            break;
+        default:
+            // Or use the write_ln shortcut over adding '\n' to the end of your string
+            oled_write_ln_P(PSTR("Undefined"), false);
 }
 #endif
 
